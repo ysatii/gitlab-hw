@@ -23,6 +23,7 @@
 
 ## Решение 1
 
+[Ссылка на коммиит в ветке master ](https://github.com/ysatii/git1/commit/ea4dde5d998b5abd1d8c07dd0784a2c9326e9a41)
 ---
 
 ## Задание 2
