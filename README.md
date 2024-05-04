@@ -45,7 +45,7 @@
 ## Решение 2
 1. `Создадим новый проект pipeline.`
 ### листинг pipeline my_pipe1
-'''
+```
 pipeline {
  agent any
  stages {
@@ -64,7 +64,7 @@ pipeline {
   }
  }
 }
-'''
+```
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_3.jpg)
