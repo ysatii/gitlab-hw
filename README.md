@@ -202,9 +202,9 @@ pipeline {
  }
 }
 ```
-![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_2.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img4/image4_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img4/image4_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img4/image4_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img4/image4_4.jpg)
 
 
