@@ -75,7 +75,6 @@ pipeline {
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_3.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_4.jpg)
 
-### Решение
 ---
 
 ## Задание 3
@@ -90,7 +89,20 @@ pipeline {
 
 `В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.`
 ## Решение 3
-### Решение)
+1. `Установите на машину Nexus. установка произведена на машину яндекс облака`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_1.jpg)
+
+2. `Создадим raw-hosted репозиторий.`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_2.jpg)
+
+3. `Измените pipeline так, чтобы вместо Docker-образа собирался бинарный go-файл. Команду можно скопировать из Dockerfile.`
+4. `Загрузите файл в репозиторий с помощью jenkins.`
+ 
+
+
+
+
+
 
 ## Задание 4
 
