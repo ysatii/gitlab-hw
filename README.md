@@ -170,7 +170,41 @@ pipeline {
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки`
 
 
- 
-`В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.`
+
 ## Решение 4
-### Решение 
+
+1. `Самое оптимальное решение изменить скрпит пунта 4.4 приписав перменную $BUILD_NUMBER` к имени выходного файла ./appv$BUILD_NUMBER`
+
+Листинг предлагаемого решения
+
+```
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git 'https://github.com/netology-code/sdvps-materials.git'}
+  }
+  stage('Run tests') {
+            steps {
+                sh '/usr/local/go/bin/go test .'
+            }
+  }
+  stage('bilding ') {
+   steps {
+    sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o Самый .'
+   }
+  }
+   stage('push to Nexus repo') {
+    steps {
+     sh 'curl -u admin:1234 http://ubuntu-bionic:8081/repository/raw-hosted/ --upload-file ./appv$BUILD_NUMBER -v'
+    }
+  }
+ }
+}
+```
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image4_4.jpg)
+
+
