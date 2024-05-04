@@ -24,6 +24,11 @@
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_3.jpg)
 
 4. `Создадим в jenkins Freestyle Project, подключим получившийся репозиторий к нему и произведем запуск тестов и сборку проекта go test . и docker build ..`
+### листинг **Freestyle Project** first
+```
+/usr/local/go/bin/go test .
+docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
+```
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_2.jpg)
