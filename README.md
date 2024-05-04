@@ -16,6 +16,16 @@
 ## Решение 1
 1. `Используем виртуальную машину яндекс облака с готовым бразом jenkins.`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_1.jpg)
+2. `Установим на машину с jenkins golang.`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_2.jpg)
+3. `Делаем форк нужного репозитория **https://github.com/netology-code/sdvps-materials.git**  с заданием`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_3.jpg)
+4. `Создадим в jenkins Freestyle Project, подключим получившийся репозиторий к нему и произведем запуск тестов и сборку проекта go test . и docker build ..`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_3.jpg)
+
 
 ### Решение
 
