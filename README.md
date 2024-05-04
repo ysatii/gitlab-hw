@@ -44,6 +44,27 @@
 
 ## Решение 2
 1. `Создадим новый проект pipeline.`
+### листинг pipeline 
+'''
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git 'https://github.com/netology-code/sdvps-materials.git'}
+  }
+  stage('Test') {
+   steps {
+    sh '/usr/local/go/bin/go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh 'docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER'
+   }
+  }
+ }
+}
+'''
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_3.jpg)
