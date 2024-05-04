@@ -49,7 +49,7 @@ docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
 
 ## Решение 2
 1. `Создадим новый проект pipeline.`
-### листинг pipeline my_pipe1
+### Листинг pipeline my_pipe1
 ```
 pipeline {
  agent any
@@ -97,7 +97,7 @@ pipeline {
 
 3. `Измените pipeline так, чтобы вместо Docker-образа собирался бинарный go-файл. Команду можно скопировать из Dockerfile.`
 
-### листинг pipepline
+### Листинг pipepline
 ```
 pipeline {
  agent any
@@ -125,7 +125,7 @@ pipeline {
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3_4.jpg)
 
 4. `Загрузите файл в репозиторий с помощью jenkins.`
-### листинг pipepline
+### Листинг pipepline
 ```
 pipeline {
  agent any
