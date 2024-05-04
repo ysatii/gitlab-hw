@@ -44,7 +44,7 @@
 
 ## Решение 2
 1. `Создадим новый проект pipeline.`
-### листинг pipeline 
+### листинг pipeline my_pipe1
 '''
 pipeline {
  agent any
