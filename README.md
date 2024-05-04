@@ -112,13 +112,8 @@ pipeline {
   }
   stage('bilding ') {
    steps {
-    sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o ./appv$BUILD_NUMBER .'
+    sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o ./appv .'
    }
-  }
-   stage('push to Nexus repo') {
-    steps {
-     sh 'curl -u admin:1234 http://ubuntu-bionic:8081/repository/raw-hosted/ --upload-file ./appv$BUILD_NUMBER -v'
-    }
   }
  }
 }
@@ -130,10 +125,36 @@ pipeline {
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3_4.jpg)
 
 4. `Загрузите файл в репозиторий с помощью jenkins.`
+### листинг pipepline
+```
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git 'https://github.com/netology-code/sdvps-materials.git'}
+  }
+  stage('Run tests') {
+            steps {
+                sh '/usr/local/go/bin/go test .'
+            }
+  }
+  stage('bilding ') {
+   steps {
+    sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o ./appv .'
+   }
+  }
+   stage('push to Nexus repo') {
+    steps {
+     sh 'curl -u admin:1234 http://ubuntu-bionic:8081/repository/raw-hosted/ --upload-file ./appv -v'
+    }
+  }
+ }
+}
+```
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_4_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_4_2.jpg)
  
-
-
-
 
 
 
