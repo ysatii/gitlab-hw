@@ -29,9 +29,6 @@
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_4_3.jpg)
 
-
-### Решение
-
 ---
 
 ## Задание 2
@@ -46,6 +43,12 @@
 `В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.`
 
 ## Решение 2
+1. `Создадим новый проект pipeline.`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img2/image2_4.jpg)
+
 ### Решение
 ---
 
