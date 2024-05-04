@@ -96,6 +96,39 @@ pipeline {
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_2.jpg)
 
 3. `Измените pipeline так, чтобы вместо Docker-образа собирался бинарный go-файл. Команду можно скопировать из Dockerfile.`
+
+### листинг pipepline
+```
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git 'https://github.com/netology-code/sdvps-materials.git'}
+  }
+  stage('Run tests') {
+            steps {
+                sh '/usr/local/go/bin/go test .'
+            }
+  }
+  stage('bilding ') {
+   steps {
+    sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o ./appv$BUILD_NUMBER .'
+   }
+  }
+   stage('push to Nexus repo') {
+    steps {
+     sh 'curl -u admin:1234 http://ubuntu-bionic:8081/repository/raw-hosted/ --upload-file ./appv$BUILD_NUMBER -v'
+    }
+  }
+ }
+}
+```
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img3/image3_3_4.jpg)
+
 4. `Загрузите файл в репозиторий с помощью jenkins.`
  
 
