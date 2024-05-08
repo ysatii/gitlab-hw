@@ -46,7 +46,35 @@
 1. `Запушили [репозиторий](https://github.com/netology-code/sdvps-materials/tree/main/gitlab) на GitLab`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_1_1.jpg)
 
+2. `Создайте .gitlab-ci.yml, описав в нём все необходимые, на ваш взгляд, этапы.`
+```
+stages:
+  - test
+  - build
 
+test:
+  stage: test
+  image: golang:1.17
+  script: 
+   - go test .
+
+static-analysis:
+ stage: test
+ image:
+  name: sonarsource/sonar-scanner-cli
+  entrypoint: [""]
+ variables:
+ script:
+  - sonar-scanner -Dsonar.projectKey=my_project -Dsonar.sources=. -Dsonar.host.url=http://gitlab.localdomain:9000 -Dsonar.login=sqp_dc381d34020d1da7e2fa0d969305503b2e949d7f
+
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+
+```
 
 
 
