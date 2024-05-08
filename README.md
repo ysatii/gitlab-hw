@@ -22,9 +22,9 @@
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2_4.jpg)
 3. `gitlab-runner  в режиме Docker.`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_4.jpg)
 ---
 
 ## Задание 2
