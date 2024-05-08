@@ -78,7 +78,6 @@ build:
 ```
 
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_3.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_4.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_5.jpg)
