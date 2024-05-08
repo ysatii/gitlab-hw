@@ -82,7 +82,8 @@ build:
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_3.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_4.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_5.jpg)
-
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_6.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_7.jpg)
 
 
 `В качестве ответа добавьте в шаблон с решением файл gitlab-ci.yml своего проекта или вставьте код в соответсвующее поле в шаблоне.`
