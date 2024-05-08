@@ -12,8 +12,8 @@
 ### `В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.`
 
 ## Решение 1
-![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/ci-cd/img1/image1_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2.jpg)
 
 
 ---
