@@ -1,30 +1,31 @@
-# Домашнее задание к занятию «GitLab» - `Мельник Юрий Александрович`
+# Домашнее задание к занятию «Система мониторинга Zabbix»`
 
 
 ## Задание 1
 
-### `Что нужно сделать:`
+### `Установите Zabbix Server с веб-интерфейсом.`
+## `Процесс выполнения`
 
-1. `Разверните GitLab локально, используя Vagrantfile и инструкцию, описанные в этом [этом ](https://github.com/netology-code/sdvps-materials/tree/main/gitlab) репозитории.`
-2. `Создайте новый проект и пустой репозиторий в нём.Создайте новый проект и пустой репозиторий в нём.Создайте новый проект и пустой репозиторий в нём.`
-3. `Зарегистрируйте gitlab-runner для этого проекта и запустите его в режиме Docker. Раннер можно регистрировать и запускать на той же виртуальной машине, на которой запущен GitLab.`
+1. ``
+2. ``
+3. ``
 
-### `В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.`
+### `Требования к результату`
 
+1. `Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.`
+2. `Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11`
+3. `Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.`
+4. `Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.`
 ## Решение 1
 1. `GitLab установлен локально, используя Vagrantfile. Подлючимся к машине по ssh`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2.jpg)
+
 2. `Создадим новый проект и пустой репозиторий в нём.`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2_2.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2_4.jpg)
+
 3. `gitlab-runner  в режиме Docker.`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_2.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_4.jpg)
+
 ---
 
 ## Задание 2
