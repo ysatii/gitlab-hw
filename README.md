@@ -68,15 +68,22 @@
 1. `установим агент на операционную систему Windows`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_2.jpg)
+
 2. `Откроем порт агента Zabbix для доступа из интернета`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_3.jpg)
+
 3. `файловая система компютера до теста файлового пространства`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_4.jpg)
-3. `файловая система компютера вовремя теста файлового пространства`
+
+4. `файловая система компютера вовремя теста файлового пространства`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_5.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_6.jpg)
+
+5. `файловая система компютера вовремя теста файлового пространства`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_7.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_8.jpg)
+
+6. `получили оповещения о проблемах с файловым пространством`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_9.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_10.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
