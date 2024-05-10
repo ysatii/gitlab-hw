@@ -6,85 +6,70 @@
 ### `Установите Zabbix Server с веб-интерфейсом.`
 ## `Процесс выполнения`
 
-1. ``
-2. ``
-3. ``
-
-### `Требования к результату`
-
 1. `Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.`
 2. `Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11`
 3. `Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.`
 4. `Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.`
+
+### `Требования к результату`
+
+1. `Прикрепите в файл README.md скриншот авторизации в админке.`
+2. `Приложите в файл README.md текст использованных команд в GitHub.`
+
+
 ## Решение 1
 1. `GitLab установлен локально, используя Vagrantfile. Подлючимся к машине по ssh`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_1.jpg)
 
-2. `Создадим новый проект и пустой репозиторий в нём.`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_2_1.jpg)
 
-3. `gitlab-runner  в режиме Docker.`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_3_1.jpg)
 
 ---
 
 ## Задание 2
 
-### `Что нужно сделать:`
-
-1. `Запушьте [репозиторий](https://github.com/netology-code/sdvps-materials/tree/main/gitlab) на GitLab, изменив origin. Это изучалось на занятии по Git.`
-2. `Создайте .gitlab-ci.yml, описав в нём все необходимые, на ваш взгляд, этапы.`
+### `Установите Zabbix Agent на два хоста.`
 
 
+1. `Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.`
+2. `Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.`
+3. `Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.`
+4. `Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.`
+5. `Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.`
 
-`В качестве ответа в шаблон с решением добавьте:
+### `Требования к результату`
 
-   - файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
-   - скриншоты с успешно собранными сборками.
-`
+
+1. `Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу`
+2. `Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером`
+3. `Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.`
+4. `Приложите в файл README.md текст использованных команд в GitHub`
+
+
 
 ## Решение 2
-1. `Запушили [репозиторий](https://github.com/netology-code/sdvps-materials/tree/main/gitlab) на GitLab`
+1. ``
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_1_1.jpg)
 
-2. `Создайте .gitlab-ci.yml, описав в нём все необходимые, на ваш взгляд, этапы.`
+ 
 
 ```
-stages:
-  - test
-  - build
-
-test:
-  stage: test
-  image: golang:1.17
-  script: 
-   - go test .
-
-static-analysis:
- stage: test
- image:
-  name: sonarsource/sonar-scanner-cli
-  entrypoint: [""]
- variables:
- script:
-  - sonar-scanner -Dsonar.projectKey=my_project -Dsonar.sources=. -Dsonar.host.url=http://gitlab.localdomain:9000 -Dsonar.login=sqp_dc381d34020d1da7e2fa0d969305503b2e949d7f
-
-
-build:
-  stage: build
-  image: docker:latest
-  script:
-   - docker build .
-
 ```
 
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_4.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_5.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_6.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_2_7.jpg)
+
+## Задание 3
+
+### `Установите Zabbix Agent на Windows (компьютер) и подключите его к серверу Zabbix.`
 
 
-`В качестве ответа добавьте в шаблон с решением файл gitlab-ci.yml своего проекта или вставьте код в соответсвующее поле в шаблоне.`
+1. `Приложите в файл README.md скриншот раздела Latest Data, где видно свободное место на диске C:`
+ 
+
+## Решение 3
+1. ``
+
+
+ 
+
+```
+```
 
