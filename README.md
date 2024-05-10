@@ -65,33 +65,40 @@
  
 
 ## Решение 3
-1. `установим агент на операционную систему Windows`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_2.jpg)
+Для выполнения задания нам понадобться создать свой шаблон для виндовс машин, при необходимости можно сделать импорт
+Создаем 4 айтем 
+- 	DiskFree
+-	DiskPFree
+- DiskTotal
+- DiskUsed
 
-2. `Откроем порт агента Zabbix для доступа из интернета`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_3.jpg)
+тригеры
+Not classified	Меньше 1ГБ свободно на системном диске компьютера {HOST.NAME}
+last(/Check-Disks-Windows/vfs.fs.size["c:",free])<1000M
+	Enabled	
 
-3. `файловая система компютера до теста файлового пространства`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_4.jpg)
+	Not classified	Меньше 10% свободно на системном диске компьютера {HOST.NAME}	
+last(/Check-Disks-Windows/vfs.fs.size["c:",pfree])<10
 
-4. `файловая система компютера вовремя теста файлового пространства`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_5.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_6.jpg)
+	Enabled	
+	Not classified	Меньше 20% свободно на системном диске компьютера {HOST.NAME}	
+last(/Check-Disks-Windows/vfs.fs.size["c:",pfree])<20
+1
 
-5. `файловая система компютера вовремя теста файлового пространства`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_7.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_8.jpg)
-
-6. `получили оповещения о проблемах с файловым пространством`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_9.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_10.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
+	Enabled	
+	Not classified	Меньше 100 Мб свободно на системном диске компьютера {HOST.NAME}	
+last(/Check-Disks-Windows/vfs.fs.size["c:",free])<100M
 
 
- 
-## листинг zbx_export_templates.
+графики
+	Cвободное место на диске в процентах	900	200	Normal
+	Использующий объём диска	900	200	Normal
+	Общий объём диска	900	200	Normal
+	Свободное место на диске	900	200	Normal
+          
+
+
+## листинг zbx_export_templates.yaml
 ```
 zabbix_export:
   version: '6.0'
@@ -176,4 +183,35 @@ zabbix_export:
             key: 'vfs.fs.size["c:",free]'
 
 ```
+
+
+
+1. `установим агент на операционную систему Windows`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_2.jpg)
+
+2. `Откроем порт агента Zabbix для доступа из интернета`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_3.jpg)
+
+3. `файловая система компютера до теста файлового пространства`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_4.jpg)
+
+4. `файловая система компютера вовремя теста файлового пространства`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_5.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_6.jpg)
+
+5. `файловая система компютера вовремя теста файлового пространства`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_7.jpg)
+
+6. `получили оповещения о проблемах с файловым пространством`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_8.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_9.jpg)
+
+7. `Графики изменеия файлового пространства во время теста`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_10.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
+
+
+ 
 
