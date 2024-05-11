@@ -25,7 +25,7 @@ apt update
 apt install postgresql
  ```
 
-2. Установите репозиторий Zabbix 
+2. `Установим репозиторий Zabbix`
  ```
 wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
 
@@ -33,29 +33,44 @@ dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
 
 apt update
  ```
+
+3. `Установите Zabbix сервер, веб-интерфейс и агент`
+ ```
+ apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+ ```
+
+4. `Создадим базу данных и пользователя базы данных`
+ ```
+ su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\'';"'
+ su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+ ```
+ 
+ произведем импорт данных
+ 
+ ```
+ zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix 
+ ```
+5. `Настроим пароль пользователя в кофигурационном файле /etc/zabbix/zabbix_server.conf`
+ ```
+ sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
+ 
+6. `Настроим пароль пользователя в кофигурационном файле /etc/zabbix/zabbix_server.conf`
+ ```
+ systemctl restart zabbix-server zabbix-agent apache2
+ systemctl enable zabbix-server zabbix-agent apache2 
+ ```
+
 
 
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_1.jpg)
 
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
+ 
 
-dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+ 
 
-apt update
 
-apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts
 
-su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\'';"'
 
-su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
-
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-
-sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
-
-sudo systemctl restart zabbix-server apache2 # zabbix-agent
-
-sudo systemctl enable zabbix-server apache2 # zabbix-agent  
 
 ---
 
