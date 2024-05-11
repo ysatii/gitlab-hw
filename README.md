@@ -86,7 +86,7 @@
           
 
 
-## листинг zbx_export_templates.yaml
+## Листинг zbx_export_templates.yaml
 ```
 zabbix_export:
   version: '6.0'
@@ -176,24 +176,24 @@ zabbix_export:
 
 
 
-1. `установим агент на операционную систему Windows   `
+1. `Установим агент на операционную систему Windows   `
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_2.jpg)
 
-2. `Откроем порт агента Zabbix для доступа из интернета`
+2. `Откроем порт агента Zabbix для доступа из интернета, я арендую внешний адрес у провайдера!`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_3.jpg)
 
-3. `файловая система компютера до теста файлового пространства`
+3. `Файловая система компютера до теста файлового пространства`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_4.jpg)
 
-4. `файловая система компютера вовремя теста файлового пространства`
+4. `Файловая система компютера вовремя теста файлового пространства`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_5.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_6.jpg)
 
 5. `файловая система компютера вовремя теста файлового пространства`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_7.jpg)
 
-6. `получили оповещения о проблемах с файловым пространством`
+6. `Получили оповещения о проблемах с файловым пространством`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_8.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_9.jpg)
 
