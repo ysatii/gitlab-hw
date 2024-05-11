@@ -91,18 +91,57 @@ apt update
 
 
 ## Решение 2
-1. `Опишем команды для установки Zabbix Agent`
+ 
+1. ` Zabbix Agent`
  ```
- sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
-  ```
+ apt update 
 
+ apt install postgresql
+ ```
 
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_1_1.jpg)
+2. `Установим репозиторий Zabbix`
+ ```
+ wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
+
+ dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb 
+
+ apt update
+ ```
+ 
+3. `Установим репозиторий Zabbix агент`
+ ```
+ apt install zabbix-agent
+ ```
+
+4. `Разрешим доступ с нашего Zabbix сервера`
+ ```
+ sed -i 's/# Server=127.0.0.1/Server=158.160.110.109/g' /etc/zabbix/zabbix_agentd.conf
+ cat /etc/zabbix/zabbix_agentd.conf | grep Server=
+ ```
+ 
+5. ` Запустите процесс Zabbix агента `
+ ```
+ apt install zabbix-agent
+ ```
+
 
  
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_5.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_6.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_7.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_8.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_9.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_10.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_11.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_12.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_13.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_14.jpg)
 
-```
-```
+
 
 
 ## Задание 3
