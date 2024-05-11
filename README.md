@@ -124,15 +124,20 @@ apt update
  apt install zabbix-agent
  ```
 
-
+Установим хосты на мониторинг
  
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_3.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_4.jpg)
+
+Проверим работоспособность агента
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_5.jpg)
+
+Проверим поступление данных от хостов 
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_6.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_7.jpg)
+
+Приведем графики активности одной из машин
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_8.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_9.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_10.jpg)
@@ -153,6 +158,9 @@ apt update
  
 
 ## Решение 3
+Скачаем и установим агент на Windows
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_7.jpg)
+
 1. Для выполнения задания нам понадобться создать свой шаблон для виндовс машин, при необходимости можно сделать импорт
    Создаем 4 айтемсс
  * DiskFree  - свободное пространство
