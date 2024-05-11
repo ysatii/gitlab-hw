@@ -17,6 +17,11 @@
 2. `Приложите в файл README.md текст использованных команд в GitHub.`
 
 ### Подготовим 3 машины на яндекс облаке, первую будем использовать в роли Zabbix Server, остальные будут клиентами, на них будет установлен агент 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_5.jpg)
 ## Решение 1
 1. `На машину с именем "zabbix-deb" установим PostgreSQL`
  ```
@@ -64,7 +69,10 @@ apt update
 
 
 
-![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image1_1.jpg)
+
+
+
+
 
  
 
@@ -102,7 +110,12 @@ apt update
 
 
 ## Решение 2
-1. ``
+1. `Опишем команды для установки Zabbix Agent`
+ ```
+ sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
+  ```
+
+
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/gitlab/img1/image2_1_1.jpg)
 
  
