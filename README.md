@@ -186,7 +186,7 @@ zabbix_export:
 
 
 
-1. `установим агент на операционную систему Windows`
+1. `установим агент на операционную систему Windows \`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_2.jpg)
 
