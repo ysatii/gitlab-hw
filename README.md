@@ -49,11 +49,13 @@ apt update
  
  ```
  zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix 
+ 
  ```
 5. `Настроим пароль пользователя в кофигурационном файле /etc/zabbix/zabbix_server.conf`
  ```
  sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
- 
+  ```
+  
 6. `Настроим пароль пользователя в кофигурационном файле /etc/zabbix/zabbix_server.conf`
  ```
  systemctl restart zabbix-server zabbix-agent apache2
