@@ -129,7 +129,7 @@ apt update
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_4.jpg)
+
 
 Проверим работоспособность агента
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_5.jpg)
