@@ -181,9 +181,9 @@ apt update
  * Свободное место на диске
           
 
-[скачать zbx_export_templates.yaml] (https://github.com/ysatii/gitlab-hw/blob/zabbix/zbx_export_templates.yaml)
-## Листинг zbx_export_templates.yaml
 
+## Листинг zbx_export_templates.yaml
+## [скачать zbx_export_templates.yaml] (https://github.com/ysatii/gitlab-hw/blob/zabbix/zbx_export_templates.yaml)
  ```
  zabbix_export:
    version: '6.0'
