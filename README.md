@@ -18,10 +18,7 @@
 
 ### Подготовим 3 машины на яндекс облаке, первую будем использовать в роли Zabbix Server, остальные будут клиентами, на них будет установлен агент 
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_1.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_2.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_4.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_5.jpg)
+
 ## Решение 1
 1. `На машину с именем "zabbix-deb" установим PostgreSQL`
  ```
@@ -67,26 +64,10 @@ apt update
  systemctl enable zabbix-server zabbix-agent apache2 
  ```
 
-
-
-
-
-
-
-
- 
-
- 
-
-
-
-
-
----
-
-
-
-
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_5.jpg)
 
 ## Задание 2
 
