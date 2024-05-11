@@ -146,8 +146,8 @@ apt update
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_13.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_14.jpg)
 
-часть лога сервера, подтверждающая что разрешены подключения только с http://158.160.104.145
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_3.jpg)
+часть лога сервера, подтверждающая что разрешены подключения только с http://158.160.104.145   
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image2_4.jpg)
 
 
 
