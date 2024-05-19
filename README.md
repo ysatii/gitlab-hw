@@ -18,71 +18,290 @@
 
 
 ## Решение 1
-1. `На машину с именем "zabbix-deb" установим PostgreSQL`
+1. `Создадим свой шаблон`
+ Листинг шаблона 
  ```
-apt update 
+ zabbix_export:
+  version: '6.0'
+  date: '2024-05-19T22:04:33Z'
+  groups:
+    - uuid: 3cd2d0556dad4d3498b2befc0640498d
+      name: hw
+  templates:
+    - uuid: 7326464f637647919f92743de6a2aac2
+      template: hw1
+      name: hw1
+      description: |
+        Задание 1 
+        1. Создайте Item который будет собирать информацию об загрузке CPU в процентах
+        2. Создайте Item который будет собирать информацию об загрузке RAM в процентах
+      groups:
+        - name: hw
+      items:
+        - uuid: a7d4adce3b2343f38eec7d4dda619bd5
+          name: 'Свободная память в процентах'
+          key: my_mem
+          delay: 3s
+          value_type: FLOAT
+          units: '%'
+        - uuid: 2a4289a6705b4f8188eb1647b613fa04
+          name: 'нагрузка на проценссор в % 1 минута'
+          key: 'system.cpu.util[,,avg1]'
+          delay: 3s
+          value_type: FLOAT
+        - uuid: da7eff0744014a2cb8e10cf222e06987
+          name: 'Свободная память'
+          key: 'vm.memory.size[free]'
+          delay: 3s
+          units: B
+  graphs:
+    - uuid: 66027da30715420cbc0d602ec9be246b
+      name: 'Нагрузка на проценссор в %'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'system.cpu.util[,,avg1]'
+    - uuid: 367628b560af44b098039cde9161ce94
+      name: 'Свободная память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'vm.memory.size[free]'
+    - uuid: f587ca786bbb43ad8190d5c0f1e96f3c
+      name: 'Свободная память в процентах'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: my_mem
+zabbix_export:
+  version: '6.0'
+  date: '2024-05-19T22:04:33Z'
+  groups:
+    - uuid: 3cd2d0556dad4d3498b2befc0640498d
+      name: hw
+  templates:
+    - uuid: 7326464f637647919f92743de6a2aac2
+      template: hw1
+      name: hw1
+      description: |
+        Задание 1 
+        1. Создайте Item который будет собирать информацию об загрузке CPU в процентах
+        2. Создайте Item который будет собирать информацию об загрузке RAM в процентах
+      groups:
+        - name: hw
+      items:
+        - uuid: a7d4adce3b2343f38eec7d4dda619bd5
+          name: 'Свободная память в процентах'
+          key: my_mem
+          delay: 3s
+          value_type: FLOAT
+          units: '%'
+        - uuid: 2a4289a6705b4f8188eb1647b613fa04
+          name: 'нагрузка на проценссор в % 1 минута'
+          key: 'system.cpu.util[,,avg1]'
+          delay: 3s
+          value_type: FLOAT
+        - uuid: da7eff0744014a2cb8e10cf222e06987
+          name: 'Свободная память'
+          key: 'vm.memory.size[free]'
+          delay: 3s
+          units: B
+  graphs:
+    - uuid: 66027da30715420cbc0d602ec9be246b
+      name: 'Нагрузка на проценссор в %'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'system.cpu.util[,,avg1]'
+    - uuid: 367628b560af44b098039cde9161ce94
+      name: 'Свободная память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'vm.memory.size[free]'
+    - uuid: f587ca786bbb43ad8190d5c0f1e96f3c
+      name: 'Свободная память в процентах'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: my_mem
+zabbix_export:
+  version: '6.0'
+  date: '2024-05-19T22:04:33Z'
+  groups:
+    - uuid: 3cd2d0556dad4d3498b2befc0640498d
+      name: hw
+  templates:
+    - uuid: 7326464f637647919f92743de6a2aac2
+      template: hw1
+      name: hw1
+      description: |
+        Задание 1 
+        1. Создайте Item который будет собирать информацию об загрузке CPU в процентах
+        2. Создайте Item который будет собирать информацию об загрузке RAM в процентах
+      groups:
+        - name: hw
+      items:
+        - uuid: a7d4adce3b2343f38eec7d4dda619bd5
+          name: 'Свободная память в процентах'
+          key: my_mem
+          delay: 3s
+          value_type: FLOAT
+          units: '%'
+        - uuid: 2a4289a6705b4f8188eb1647b613fa04
+          name: 'нагрузка на проценссор в % 1 минута'
+          key: 'system.cpu.util[,,avg1]'
+          delay: 3s
+          value_type: FLOAT
+        - uuid: da7eff0744014a2cb8e10cf222e06987
+          name: 'Свободная память'
+          key: 'vm.memory.size[free]'
+          delay: 3s
+          units: B
+  graphs:
+    - uuid: 66027da30715420cbc0d602ec9be246b
+      name: 'Нагрузка на проценссор в %'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'system.cpu.util[,,avg1]'
+    - uuid: 367628b560af44b098039cde9161ce94
+      name: 'Свободная память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'vm.memory.size[free]'
+    - uuid: f587ca786bbb43ad8190d5c0f1e96f3c
+      name: 'Свободная память в процентах'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: my_mem
+zabbix_export:
+  version: '6.0'
+  date: '2024-05-19T22:04:33Z'
+  groups:
+    - uuid: 3cd2d0556dad4d3498b2befc0640498d
+      name: hw
+  templates:
+    - uuid: 7326464f637647919f92743de6a2aac2
+      template: hw1
+      name: hw1
+      description: |
+        Задание 1 
+        1. Создайте Item который будет собирать информацию об загрузке CPU в процентах
+        2. Создайте Item который будет собирать информацию об загрузке RAM в процентах
+      groups:
+        - name: hw
+      items:
+        - uuid: a7d4adce3b2343f38eec7d4dda619bd5
+          name: 'Свободная память в процентах'
+          key: my_mem
+          delay: 3s
+          value_type: FLOAT
+          units: '%'
+        - uuid: 2a4289a6705b4f8188eb1647b613fa04
+          name: 'нагрузка на проценссор в % 1 минута'
+          key: 'system.cpu.util[,,avg1]'
+          delay: 3s
+          value_type: FLOAT
+        - uuid: da7eff0744014a2cb8e10cf222e06987
+          name: 'Свободная память'
+          key: 'vm.memory.size[free]'
+          delay: 3s
+          units: B
+  graphs:
+    - uuid: 66027da30715420cbc0d602ec9be246b
+      name: 'Нагрузка на проценссор в %'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'system.cpu.util[,,avg1]'
+    - uuid: 367628b560af44b098039cde9161ce94
+      name: 'Свободная память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'vm.memory.size[free]'
+    - uuid: f587ca786bbb43ad8190d5c0f1e96f3c
+      name: 'Свободная память в процентах'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: my_mem
+ ```
 
-apt install postgresql
+2. `Произведем настройку агента zabbix, за счет параметров создадим свою метрику свободной памяти на машине`
+ листинг  /etc/zabbix/zabbix_agentd.conf.d//my_mem_parameter.conf 
  ```
-
-2. `Установим репозиторий Zabbix`
- ```
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
-
-dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
-
-apt update
- ```
-
-3. `Установите Zabbix сервер, веб-интерфейс и агент`
- ```
- apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
- ```
-
-4. `Создадим базу данных и пользователя базы данных`
- ```
- su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\'';"'
- su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+ UserParameter=my_mem[*], /bin/bash /etc/zabbix/zabbix_agentd.d/my_mem_parameter.sh
  ```
  
- произведем импорт данных
- 
+ листинг /etc/zabbix/zabbix_agentd.conf.d//my_mem_parameter.sh
  ```
- zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix 
- 
- ```
-5. `Настроим пароль пользователя в кофигурационном файле /etc/zabbix/zabbix_server.conf`
- ```
- sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
-  ```
-  
-6. `Настроим пароль пользователя в кофигурационном файле /etc/zabbix/zabbix_server.conf`
- ```
- systemctl restart zabbix-server zabbix-agent apache2
- systemctl enable zabbix-server zabbix-agent apache2 
- ```
+ #!/bin/bash
+ # задаем значение переменных по умолчанию
+ a=`cat /proc/meminfo | grep MemFree | awk '{print $ 2}'`
 
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_2.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_3.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_4.jpg)
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image1_5.jpg)
+ b=`cat /proc/meminfo | grep MemTotal | awk '{print $ 2}'`
+ div=`echo "scale=4; $a / $b *100" | bc`
+ echo "$div"
 
+ ```
+ также необходимо установить пакет bc для вывполения математических операцих с дробными числами
+ 
+ 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_3.jpg)
+ 
 ## Задание 2
 
 ### `Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.`
-
+## `Процесс выполнения`
 
 1. `Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.`
-2. `Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server`
-3. `Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов`
-4. `Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera`
-5. `Прикрепите за каждым хостом шаблон Linux by Zabbix Agent`
-6. `Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов`
+2. `В веб-интерфейсе Zabbix Servera в разделе Templates создайте новый шаблон`
+3. `Создайте Item который будет собирать информацию об загрузке CPU в процентах`
+4. `Создайте Item который будет собирать информацию об загрузке RAM в процентах`
+
+
+    Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+    Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server
+    Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов
+    Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera
+    Прикрепите за каждым хостом шаблон Linux by Zabbix Agent
+    Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов
+
 
 ### `Требования к результату`
 
-
-1. `Результат данного задания сдавайте вместе с заданием 3`
+1. `Прикрепите в файл README.md скриншот страницы шаблона с названием «Задание 1`
 
 
 
