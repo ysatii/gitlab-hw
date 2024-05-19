@@ -328,19 +328,23 @@ zabbix_export:
 ### `Требования к результату`
  Прикрепите в файл README.md скриншот страницы хостов, где будут видны привязки шаблонов с названиями «Задание 2-3». Хосты должны иметь зелёный статус подключения
 
-
 ## Решение 3
 
-## Листинг zbx_export_templates.yaml
-## [скачать zbx_export_templates.yaml] (https://github.com/ysatii/gitlab-hw/blob/zabbix/zbx_export_templates.yaml)
- 
-   
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
+1. `Привяжим созданный шаблон к двум хостам. Также привяжим к обоим хостам шаблон Linux by Zabbix Agent.`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3_1.jpg)
+
+2. `Статус мониторинга хостов`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3_2.jpg)
+
+3. `В разделе Latest Data начали появляться данные с добавленных агентов`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3_3.jpg)
+
 
 
 ## Задание 4
 
-### `Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.`
+### `Создайте свой кастомный дашборд.`
 
 
 1. `Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.`
@@ -356,8 +360,6 @@ zabbix_export:
 ## [скачать zbx_export_templates.yaml] (https://github.com/ysatii/gitlab-hw/blob/zabbix/zbx_export_templates.yaml)
  
    
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix/img1/image3_11.jpg)
-
 
  
 
