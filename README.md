@@ -276,9 +276,11 @@ zabbix_export:
  
  
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_5.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_1.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_2.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_3.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1_4.jpg)
  
 ## Задание 2
 
