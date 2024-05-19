@@ -330,7 +330,7 @@ zabbix_export:
 
 ## Решение 3
 
-1. `Привяжим созданный шаблон к двум хостам. Также привяжим к обоим хостам шаблон Linux by Zabbix Agent.`
+1. `Прикрепим шаблоны к каждому хосту`
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3_1.jpg)
 
@@ -356,10 +356,10 @@ zabbix_export:
 
 ## Решение 4
 
-## Листинг zbx_export_templates.yaml
-## [скачать zbx_export_templates.yaml] (https://github.com/ysatii/gitlab-hw/blob/zabbix/zbx_export_templates.yaml)
  
-   
+1. `Созда новый дашборд` 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image4.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image4_1.jpg)
 
  
 
