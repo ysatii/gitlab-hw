@@ -1,0 +1,76 @@
+zabbix_export:
+  version: '6.0'
+  date: '2024-05-18T22:33:03Z'
+  groups:
+    - uuid: 3cd2d0556dad4d3498b2befc0640498d
+      name: hw
+  templates:
+    - uuid: 7326464f637647919f92743de6a2aac2
+      template: hw1
+      name: hw1
+      groups:
+        - name: hw
+      items:
+        - uuid: a7d4adce3b2343f38eec7d4dda619bd5
+          name: 'Свободная память в процентах'
+          key: my_mem
+          delay: 3s
+          value_type: FLOAT
+          units: '%'
+        - uuid: 2a4289a6705b4f8188eb1647b613fa04
+          name: 'нагрузка на проценссор в % 1 минута'
+          key: 'system.cpu.util[,,avg1]'
+          delay: 3s
+          value_type: FLOAT
+        - uuid: e9383f0410544d49b55bc7df2d2d9a8b
+          name: 'просто память'
+          key: vm.memory.size
+          delay: 3s
+          status: DISABLED
+          value_type: FLOAT
+          units: '%'
+        - uuid: da7eff0744014a2cb8e10cf222e06987
+          name: 'Свободная память'
+          key: 'vm.memory.size[free]'
+          delay: 3s
+          units: B
+        - uuid: 60346bc6c728440cb9f6bd8569f2c065
+          name: 'вся память'
+          key: 'vm.memory.size[total]'
+          delay: 3s
+          value_type: FLOAT
+          units: B
+  graphs:
+    - uuid: 66027da30715420cbc0d602ec9be246b
+      name: 'hw1: нагрузка на проценссор в % 1'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'system.cpu.util[,,avg1]'
+    - uuid: 95cc96f946114e8898cd09ebc820625d
+      name: 'Вся память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'vm.memory.size[total]'
+    - uuid: 367628b560af44b098039cde9161ce94
+      name: 'Свободная память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: 'vm.memory.size[free]'
+    - uuid: 74abcd485363424fbe9f1fc7ed327cb1
+      name: 'просто память'
+      graph_items:
+        - color: 1A7C11
+          calc_fnc: ALL
+          item:
+            host: hw1
+            key: vm.memory.size
+
