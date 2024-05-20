@@ -256,12 +256,12 @@ zabbix_export:
  ```
 
 2. `Произведем настройку агента zabbix, за счет параметров создадим свою метрику свободной памяти на машине`
- листинг  /etc/zabbix/zabbix_agentd.conf.d//my_mem_parameter.conf 
+ Листинг  /etc/zabbix/zabbix_agentd.conf.d//my_mem_parameter.conf 
  ```
  UserParameter=my_mem[*], /bin/bash /etc/zabbix/zabbix_agentd.d/my_mem_parameter.sh
  ```
  
- листинг /etc/zabbix/zabbix_agentd.conf.d//my_mem_parameter.sh
+ Листинг /etc/zabbix/zabbix_agentd.conf.d//my_mem_parameter.sh
  ```
  #!/bin/bash
  # задаем значение переменных по умолчанию
@@ -272,7 +272,7 @@ zabbix_export:
  echo "$div"
 
  ```
- также необходимо установить пакет bc для вывполения математических операцих с дробными числами
+ Также необходимо установить пакет bc для вывполения математических операцих с дробными числами
  
  
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1.jpg)
@@ -298,6 +298,20 @@ zabbix_export:
 
 1. `Результат данного задания сдавайте вместе с заданием 3`
 
+
+ 
+
+## Задание 3
+
+### `Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.`
+
+
+1. `Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.`
+2. `Зайдите в настройки каждого хоста и в разделе Templates прикрепите к этому хосту ваш шаблон`
+3. `Так же к каждому хосту привяжите шаблон Linux by Zabbix Agent`
+4. `Проверьте что в раздел Latest Data начали поступать необходимые данные из вашего шаблона`
+### `Требования к результату`
+ Прикрепите в файл README.md скриншот страницы хостов, где будут видны привязки шаблонов с названиями «Задание 2-3». Хосты должны иметь зелёный статус подключения
 ## Решение 2
  
 1. `Установим Zabbix Agent на 2 виртмашины`
@@ -312,22 +326,6 @@ zabbix_export:
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image2_6.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image2_5.jpg)
 
-4. `Проверим что в разделе Latest Data начали появляться данные с добавленных агентов`
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image2_2.jpg)
- 
-
-## Задание 3
-
-### `Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.`
-
-
-1. `Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.`
-2. `Зайдите в настройки каждого хоста и в разделе Templates прикрепите к этому хосту ваш шаблон`
-3. `Так же к каждому хосту привяжите шаблон Linux by Zabbix Agent`
-4. `Проверьте что в раздел Latest Data начали поступать необходимые данные из вашего шаблона`
-### `Требования к результату`
- Прикрепите в файл README.md скриншот страницы хостов, где будут видны привязки шаблонов с названиями «Задание 2-3». Хосты должны иметь зелёный статус подключения
-
 ## Решение 3
 
 1. `Прикрепим шаблоны к каждому хосту`
@@ -341,6 +339,9 @@ zabbix_export:
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image3_3.jpg)
 
 
+
+4. `Проверим что в разделе Latest Data начали появляться данные с добавленных агентов`
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image2_2.jpg)
 
 ## Задание 4
 
@@ -385,8 +386,8 @@ zabbix_export:
  
 ## Задание 6 со звёздочкой
  ###Создайте UserParameter на bash и прикрепите его к созданному вами ранее шаблону. Он должен вызывать скрипт, который:
-1. `при получении 1 будет возвращать ваши ФИО,`
-2. `при получении 2 будет возвращать текущую дату.`
+1. `При получении 1 будет возвращать ваши ФИО,`
+2. `При получении 2 будет возвращать текущую дату.`
 
 ### `Требования к результату`
  Прикрепите в файл README.md код скрипта, а также скриншот Latest data с результатом работы скрипта на bash, чтобы был виден результат работы скрипта при отправке в него 1 и 2»
@@ -397,12 +398,12 @@ zabbix_export:
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image6_1.jpg) 
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image6_2.jpg)
 
- листинг  /etc/zabbix/zabbix_agentd.d/cat my_hw_6_parameter.conf
+ Листинг  /etc/zabbix/zabbix_agentd.d/cat my_hw_6_parameter.conf
  ```
  UserParameter=my_hw_6[*], /bin/bash /etc/zabbix/zabbix_agentd.d/my_hw_6_parameter.sh "$1"
  ```
  
- листинг /etc/zabbix/zabbix_agentd.d# cat my_hw_6_parameter.sh
+ Листинг /etc/zabbix/zabbix_agentd.d# cat my_hw_6_parameter.sh
  ```
  #!/bin/bash
  if [[ $1 = "1" ]]
