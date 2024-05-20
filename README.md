@@ -365,8 +365,8 @@ zabbix_export:
 
 ## Задание 5 со звёздочкой
 1. `Создайте карту и расположите на ней два своих хоста.`
-1. `Привяжите к линку триггер, связанный с agent.ping одного из хостов, и установите индикатором сработавшего триггера красную пунктирную линию.`
-1. `Выключите хост, чей триггер добавлен в линк. Дождитесь срабатывания триггера.`
+2. `Привяжите к линку триггер, связанный с agent.ping одного из хостов, и установите индикатором сработавшего триггера красную пунктирную линию.`
+3. `Выключите хост, чей триггер добавлен в линк. Дождитесь срабатывания триггера.`
 
 ### `Требования к результату`
  Прикрепите в файл README.md скриншот карты, где видно, что триггер сработал, с названием «Задание 5»
@@ -380,4 +380,44 @@ zabbix_export:
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_4.jpg) 
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_5.jpg) 
  
+ 
+ 
+ 
+## Задание 6 со звёздочкой
+ ###Создайте UserParameter на bash и прикрепите его к созданному вами ранее шаблону. Он должен вызывать скрипт, который:
+1. `при получении 1 будет возвращать ваши ФИО,`
+2. `при получении 2 будет возвращать текущую дату.`
+
+### `Требования к результату`
+ Прикрепите в файл README.md код скрипта, а также скриншот Latest data с результатом работы скрипта на bash, чтобы был виден результат работы скрипта при отправке в него 1 и 2»
+
+## Решение 6
+ 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image6.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image6_1.jpg) 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image6_2.jpg)
+
+ листинг  /etc/zabbix/zabbix_agentd.d/cat my_hw_6_parameter.conf
+ ```
+ UserParameter=my_hw_6[*], /bin/bash /etc/zabbix/zabbix_agentd.d/my_hw_6_parameter.sh "$1"
+ ```
+ 
+ листинг /etc/zabbix/zabbix_agentd.d# cat my_hw_6_parameter.sh
+ ```
+ #!/bin/bash
+ if [[ $1 = "1" ]]
+ then
+   echo "Мельник Юрий Александрович"
+ elif [[ $1 = "2" ]]
+ then
+   echo $(date)
+ else
+   echo $1 "Параметры не поддериваються"
+  
+ fi
+
+ echo The first parameter is $1
+
+ ```
+
 
