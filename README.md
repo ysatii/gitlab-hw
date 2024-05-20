@@ -361,5 +361,23 @@ zabbix_export:
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image4.jpg)
 ![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image4_1.jpg)
 
+
+
+## Задание 5 со звёздочкой
+1. `Создайте карту и расположите на ней два своих хоста.`
+1. `Привяжите к линку триггер, связанный с agent.ping одного из хостов, и установите индикатором сработавшего триггера красную пунктирную линию.`
+1. `Выключите хост, чей триггер добавлен в линк. Дождитесь срабатывания триггера.`
+
+### `Требования к результату`
+ Прикрепите в файл README.md скриншот карты, где видно, что триггер сработал, с названием «Задание 5»
+
+## Решение 5
+ 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_1.jpg) 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_2.jpg)
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_3.jpg) 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_4.jpg) 
+![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5_5.jpg) 
  
 
